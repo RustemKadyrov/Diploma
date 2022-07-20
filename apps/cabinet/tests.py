@@ -23,8 +23,8 @@ class CabinetViewSetTest(APITestCase):
         # Генерируем юзера для БД-теста
         #
         test_user = CustomUser.objects.create_user(
-            email='user@foo.com',
-            password='299792458'
+            email='rustem-k@mail.ru',
+            password='As123456!'
         )
         test_user.is_active = True
         test_user.save()
@@ -34,8 +34,8 @@ class CabinetViewSetTest(APITestCase):
         response = self.client.post(
             self.auth_url,
             {
-                'email': 'user@foo.com',
-                'password': '299792458'
+                'email': 'rustem-k@mail.ru',
+                'password': 'As123456!'
             },
             format='json'
         )
